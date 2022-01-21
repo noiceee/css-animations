@@ -1,0 +1,49 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    flex-wrap: wrap;
+}
+.button{
+    height: 80px;
+    width: 80px;
+    border: 3px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    position: relative;
+    overflow: hidden;
+}
+.button i{
+    font-size: 38px;
+    z-index: 1;
+    color: #333;
+}
+.fill{
+    background-color: #333;
+    height: 130%;
+    width: 130%;
+    border-radius: 50%;
+    position: absolute;
+    left: -105%;
+    bottom: -105%;
+    transition: all .5s ease;
+}
+.button:hover .fill{
+    transform: translate(70%, -70%);
+}
+.button:hover i{
+    color: white;
+}
