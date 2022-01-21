@@ -1,0 +1,74 @@
+html, body{
+    margin: 0px;
+    height: 100%;
+    background-color: lightcoral;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+.social-wrapper{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+.social-wrapper img{
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+}
+.social-wrapper .button{
+    position: relative;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.circle{
+    height: 155%;
+    width: 155%;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.circle-1{
+    border: 1.5px solid lightblue;
+}
+.circle-2{
+    border: 2px solid rgb(106, 106, 224);
+    height: 170%;
+    width: 170%;
+}
+.circle-3{
+    border: 2px dashed tomato;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.twitter{
+    transition: transform 1s ease-out;
+}
+.twitter:hover{
+    transform: rotate(720deg);
+}
+.facebook:hover .circle{
+    opacity: 1;
+}
+.instagram:hover .circle-3{
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.attribution{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+}
