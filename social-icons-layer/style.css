@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: rotate(-25deg) skew(25deg);
+}
+.button{
+    height: 60px;
+    width: 60px;
+    /* background-color: rgb(141, 141, 141); */
+    margin:20px;
+    position: relative;
+    cursor: pointer;
+}
+.button::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: rgb(66, 66, 66);
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    transform: skew(-45deg);
+    transform-origin: top;
+}
+.button::after{
+    content: "";
+    height: 100%;
+    width: 10px;
+    background-color: rgb(107, 107, 107);
+    position: absolute;
+    left: -10px;
+    transform: skewY(-45deg);
+    transform-origin: right;
+}
+.button span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-out;
+    color: white;
+    font-size: 25px;
+}
+.button:nth-child(1){
+    z-index: 5;
+}
+.button:nth-child(2){
+    z-index: 4;
+}
+.button:nth-child(3){
+    z-index: 3;
+}
+.button:hover span:nth-child(5){
+    transform: translate(26px, -26px);
+}
+.button:hover span:nth-child(4){
+    opacity: 0.8;
+    transform: translate(19px, -19px);
+}
+.button:hover span:nth-child(3){
+    opacity: 0.6;
+    transform: translate(12px, -12px);
+}
+.button:hover span:nth-child(2){
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
+.button:hover span:nth-child(1){
+    opacity: 0.2;
+    transform: translate(0px, -0px);
+}
