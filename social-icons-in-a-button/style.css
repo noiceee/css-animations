@@ -1,0 +1,69 @@
+*{
+    margin: 0%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightyellow;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    color: white;
+    position: relative;
+    background-color: dodgerblue;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px rgba(253, 255, 165, 0.37);
+}
+.button{
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.button h3{
+    transition: transform .36s ease-in;
+    font-weight: 200;
+}
+.button svg{
+    transition: transform .4s ease-in;
+    width: fit-content;
+    height: 40%;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.icons i{
+    cursor: pointer;
+}
+.icons i:nth-child(1){
+    transition: transform .36s ease-in;
+}
+.icons i:nth-child(2){
+    transition: transform .4s ease-in;
+}
+.icons i:nth-child(3){
+    transition: transform .44s ease-in;
+}
+.container:hover h3, .container:hover svg{
+    transform: translateY(-120px);
+}
+.container:hover .icons .fa-brands{
+    transform: translateY(-50px);
+}
